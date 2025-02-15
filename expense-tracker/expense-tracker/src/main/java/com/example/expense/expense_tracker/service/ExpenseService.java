@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -31,6 +32,8 @@ public class ExpenseService {
     public void deleteExpense(Long id){
         expenseRepository.deleteById(id);
     }
+
+    public Optional<Expense> getExpenseById(Long id) { return expenseRepository.findById(id);}
 
     public Map<String, Double> getExpenseSummary(){
         List<Object[]> result = expenseRepository.getExpenseTotalFromCategory();

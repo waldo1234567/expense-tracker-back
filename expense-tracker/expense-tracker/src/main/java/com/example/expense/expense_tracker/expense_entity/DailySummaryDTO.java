@@ -17,4 +17,28 @@ public class DailySummaryDTO {
         this.totalExpense = totalExpense;
         this.dailyAverageExpense= dailyAverageExpense;
     }
+
+    public double getThisYear() {
+        return thisYear;
+    }
+
+    public void setThisYear(double thisYear) {
+        this.thisYear = thisYear;
+    }
+
+    public double getTotalExpense() {
+        return totalExpense;
+    }
+
+    public void setTotalExpense(double totalExpense) {
+        this.totalExpense = totalExpense;
+    }
+
+    public double getDailyAverageExpense() {
+        return dailyAverageExpense;
+    }
+
+    public void setDailyAverageExpense(double dailyAverageExpense) {
+        this.dailyAverageExpense = dailyAverageExpense;
+    }
 }
