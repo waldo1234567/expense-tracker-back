@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="920fd0ab-eafe-44bd-858a-eafb3f7b9120" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/ExpenseTrackerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/config/ExpenseConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/controller/ExpenseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/expense_entity/DailySummaryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/expense_entity/Expense.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/expense_entity/MonthlyDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/repos/ExpenseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/ExpendsPredictionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/ExpenseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/expense/expense_tracker/ExpenseTrackerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/expense-tracker-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/expense-tracker-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/expense-tracker.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/expense-tracker.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/Procfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/Procfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/ExpenseTrackerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/config/ExpenseConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/controller/ExpenseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/expense_entity/DailySummaryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/expense_entity/Expense.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/expense_entity/MonthlyDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/repos/ExpenseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/service/ExpendsPredictionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/java/com/example/expense/expense_tracker/service/ExpenseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/resources/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/test/java/com/example/expense/expense_tracker/ExpenseTrackerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/expense-tracker/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/ExpenseTrackerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/config/ExpenseConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/controller/ExpenseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/expense_entity/DailySummaryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/expense_entity/Expense.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/expense_entity/MonthlyDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/repos/ExpenseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/service/ExpendsPredictionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/java/com/example/expense/expense_tracker/service/ExpenseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/resources/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/test/java/com/example/expense/expense_tracker/ExpenseTrackerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/expense-tracker/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2t560JeSDK2zzoKAqGW835jA1ol" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Waldo/expense-tracker",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ExpenseTrackerApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="expense-tracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.expense.expense_tracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.expense.expense_tracker" />
+      <option name="MAIN_CLASS_NAME" value="com.example.expense.expense_tracker.ExpenseTrackerApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ExpenseTrackerApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="920fd0ab-eafe-44bd-858a-eafb3f7b9120" name="Changes" comment="" />
+      <created>1739629369100</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739629369100</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
