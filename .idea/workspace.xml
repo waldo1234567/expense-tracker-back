@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="920fd0ab-eafe-44bd-858a-eafb3f7b9120" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/ExpendsPredictionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/ExpendsPredictionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/ExpenseTrackerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/ExpenseTrackerApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/config/ExpenseConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/config/ExpenseConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/controller/ExpenseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/controller/ExpenseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/expense_entity/DailySummaryDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/expense_entity/DailySummaryDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/expense_entity/Expense$ExpenseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/expense_entity/Expense$ExpenseBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/expense_entity/Expense.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/expense_entity/Expense.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/expense_entity/MonthlyDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/expense_entity/MonthlyDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/repos/ExpenseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/repos/ExpenseRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/service/ExpendsPredictionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/service/ExpendsPredictionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/service/ExpenseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/expense/expense_tracker/service/ExpenseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/expense-tracker-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/expense-tracker-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.expense.expense_tracker.ExpenseServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.expense.expense_tracker.ExpenseServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.expense.expense_tracker.ExpenseTrackerApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.expense.expense_tracker.ExpenseTrackerApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.expense.expense_tracker.ExpenseServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.expense.expense_tracker.ExpenseServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.expense.expense_tracker.ExpenseTrackerApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.expense.expense_tracker.ExpenseTrackerApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/expense/expense_tracker/ExpenseServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/expense/expense_tracker/ExpenseServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/expense/expense_tracker/ExpenseTrackerApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/expense/expense_tracker/ExpenseTrackerApplicationTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="920fd0ab-eafe-44bd-858a-eafb3f7b9120" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
