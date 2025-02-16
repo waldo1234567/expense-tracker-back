@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="920fd0ab-eafe-44bd-858a-eafb3f7b9120" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/proguard-rules.pro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/expense-tracker-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/expense-tracker-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/expense-tracker-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/expense-tracker-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.expense.expense_tracker.ExpenseServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.expense.expense_tracker.ExpenseServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.expense.expense_tracker.ExpenseTrackerApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.expense.expense_tracker.ExpenseTrackerApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.expense.expense_tracker.ExpenseServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.expense.expense_tracker.ExpenseServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.expense.expense_tracker.ExpenseTrackerApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.expense.expense_tracker.ExpenseTrackerApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/expense/expense_tracker/ExpenseServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/expense/expense_tracker/ExpenseServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
