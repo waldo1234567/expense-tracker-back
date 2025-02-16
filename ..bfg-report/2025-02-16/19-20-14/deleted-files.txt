@@ -1,4 +1,0 @@
-d202be270c4229e074274fcffa25455dd619a1be 221451202 expense-tracker-0.0.1-SNAPSHOT.jar
-3999b23c8ca71d2c0eceb82ccebf937fa64896c0 1501830672 expense-tracker-0.0.1-SNAPSHOT.jar
-fd95863d95c7b81ae6dc5afe865a5712bcc292ab 1501830645 expense-tracker-0.0.1-SNAPSHOT.jar
-fe09ddf301b1544873c28948d7e0c759f44bd9b3 135 expense-tracker-0.0.1-SNAPSHOT.jar
