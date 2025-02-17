@@ -14,4 +14,4 @@ WORKDIR /app
 
 COPY --from=build /app/target/expense-tracker-0.0.1-SNAPSHOT.jar /app/expense-tracker.jar
 
-ENTRYPOINT ["java", "-jar", "expense-tracker.jar"]
+ENTRYPOINT ["java", "-jar", "expense-tracker.jar", "-Dserver.address=0.0.0.0"]
