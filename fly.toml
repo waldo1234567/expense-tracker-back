@@ -14,6 +14,10 @@ primary_region = "lax"
 [[services]]
     internal_port = 8080
     external_port = 8080
+    protocol = "tcp"
     [services.ports]
         port = 8080
         handlers = ["http"]
+    [services.concurrency]
+        soft_limit = 25
+        hard_limit = 50
