@@ -9,7 +9,6 @@ public class ExpenseTrackerApplication {
 
 	public static void main(String[] args) {
 
-		System.setProperty("DB_URL", System.getenv("DB_URL"));
 		System.setProperty("DB_USERNAME", System.getenv("DB_USERNAME"));
 		System.setProperty("DB_PASSWORD", System.getenv("DB_PASSWORD"));
 		System.setProperty("DB_NAME" , System.getenv("DB_NAME"));
