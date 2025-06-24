@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="920fd0ab-eafe-44bd-858a-eafb3f7b9120" name="Changes" comment="" />
+    <list default="true" id="920fd0ab-eafe-44bd-858a-eafb3f7b9120" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/controller/IncomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/controller/SavingsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/expense_entity/IncomeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/expense_entity/SavingGoal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/expense_entity/YearlyIncomeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/repos/IncomeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/repos/SavingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/IncomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/MascotTipsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/SavingGoalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/ExpenseTrackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/ExpenseTrackerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/config/ExpenseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/config/ExpenseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/controller/ExpenseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/controller/ExpenseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/repos/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/repos/ExpenseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/ExpendsPredictionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/ExpendsPredictionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/expense/expense_tracker/service/ExpenseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/expense/expense_tracker/ExpenseServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -31,7 +54,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2t560JeSDK2zzoKAqGW835jA1ol" />
   <component name="ProjectViewState">

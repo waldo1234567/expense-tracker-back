@@ -3,6 +3,10 @@ package com.example.expense.expense_tracker;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.embedded.tomcat.ConfigurableTomcatWebServerFactory;
+import org.springframework.boot.web.server.ConfigurableWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 public class ExpenseTrackerApplication {
@@ -16,4 +20,15 @@ public class ExpenseTrackerApplication {
 		SpringApplication.run(ExpenseTrackerApplication.class, args);
 	}
 
+
+	@Component
+	class ServerPortCustomizer implements WebServerFactoryCustomizer<ConfigurableWebServerFactory>{
+		@Override
+		public void customize(ConfigurableWebServerFactory factory) {
+			String port = System.getenv("PORT");
+			if (port != null) {
+				factory.setPort(Integer.parseInt(port));
+			}
+		}
+	}
 }

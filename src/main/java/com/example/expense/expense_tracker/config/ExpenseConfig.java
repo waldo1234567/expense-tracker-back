@@ -1,63 +1,226 @@
 package com.example.expense.expense_tracker.config;
 
 import com.example.expense.expense_tracker.expense_entity.Expense;
+import com.example.expense.expense_tracker.expense_entity.Income;
+import com.example.expense.expense_tracker.expense_entity.SavingGoal;
 import com.example.expense.expense_tracker.repos.ExpenseRepository;
+import com.example.expense.expense_tracker.repos.IncomeRepository;
+import com.example.expense.expense_tracker.repos.SavingRepository;
+import org.apache.commons.math3.analysis.function.Exp;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.YearMonth;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 @Configuration
 public class ExpenseConfig {
     @Bean
-    CommandLineRunner commandLineRunner(ExpenseRepository repos){
-        YearMonth currentMonth = YearMonth.now();
-        int year = currentMonth.getYear();
-        int month = currentMonth.getMonthValue();
+    CommandLineRunner commandLineRunner(ExpenseRepository repos, IncomeRepository incomeRepos, SavingRepository savingRepository){
+
 
         return args -> {
-            List<Expense> expenses = List.of(
-                    new Expense("Groceries", 2100.00, "Food", LocalDateTime.of(2023, 1, 5, 10, 0)),
-                    new Expense("Gym Membership", 800.00, "Health", LocalDateTime.of(2023, 2, 1, 9, 0)),
-                    new Expense("Car Repair", 4500.00, "Transport", LocalDateTime.of(2023, 3, 10, 15, 30)),
-                    new Expense("Weekend Trip", 6000.00, "Entertainment", LocalDateTime.of(2023, 4, 15, 12, 0)),
-                    new Expense("Dining Out", 1800.00, "Food", LocalDateTime.of(2023, 5, 20, 20, 0)),
-                    new Expense("Online Shopping", 3200.00, "Shopping", LocalDateTime.of(2023, 6, 8, 17, 45)),
-                    new Expense("Gas", 1500.00, "Transport", LocalDateTime.of(2023, 7, 3, 14, 0)),
-                    new Expense("New Laptop", 12000.00, "Electronics", LocalDateTime.of(2023, 8, 10, 11, 0)),
-                    new Expense("Netflix Subscription", 500.00, "Entertainment", LocalDateTime.of(2023, 9, 1, 12, 0)),
-                    new Expense("Medical Checkup", 3800.00, "Health", LocalDateTime.of(2023, 10, 5, 9, 0)),
-                    new Expense("Groceries", 2500.00, "Food", LocalDateTime.of(2023, 11, 7, 10, 0)),
-                    new Expense("Christmas Gifts", 7500.00, "Shopping", LocalDateTime.of(2023, 12, 20, 16, 0)),
+            YearMonth currentYm = YearMonth.now();
+            int cy = currentYm.getYear(), cm = currentYm.getMonthValue();
 
-                    // 2024 Data
-                    new Expense("Dining Out", 2200.00, "Food", LocalDateTime.of(2024, 1, 18, 20, 0)),
-                    new Expense("Gas", 1600.00, "Transport", LocalDateTime.of(2024, 2, 10, 14, 0)),
-                    new Expense("New Phone", 10000.00, "Electronics", LocalDateTime.of(2024, 3, 5, 10, 30)),
-                    new Expense("Spotify Subscription", 600.00, "Entertainment", LocalDateTime.of(2024, 4, 2, 12, 0)),
-                    new Expense("Flight Tickets", 8500.00, "Travel", LocalDateTime.of(2024, 5, 12, 9, 0)),
-                    new Expense("Dining Out", 2000.00, "Food", LocalDateTime.of(2024, 6, 25, 19, 0)),
-                    new Expense("Furniture Purchase", 9500.00, "Home", LocalDateTime.of(2024, 7, 6, 15, 30)),
-                    new Expense("Electricity Bill", 3200.00, "Utilities", LocalDateTime.of(2024, 8, 22, 18, 0)),
-                    new Expense("Weekend Trip", 6700.00, "Entertainment", LocalDateTime.of(2024, 9, 15, 12, 0)),
-                    new Expense("Car Maintenance", 5000.00, "Transport", LocalDateTime.of(2024, 10, 10, 11, 0)),
-                    new Expense("Black Friday Shopping", 9800.00, "Shopping", LocalDateTime.of(2024, 11, 29, 16, 0)),
-                    new Expense("Holiday Travel", 12500.00, "Travel", LocalDateTime.of(2024, 12, 23, 9, 0)),
+            List<Expense> expenses = new ArrayList<>();
+            Random rnd = new Random(42);
 
-                    new Expense("Dining Out", 2200.00, "Food", LocalDateTime.of(year, month, 5, 19, 0)),
-                    new Expense("Gas", 1600.00, "Transport", LocalDateTime.of(year, month, 10, 14, 0)),
-                    new Expense("Electricity Bill", 3200.00, "Utilities", LocalDateTime.of(year, month, 15, 18, 30)),
-                    new Expense("Netflix Subscription", 500.00, "Entertainment", LocalDateTime.of(year, month, 1, 12, 0)),
-                    new Expense("Groceries", 2500.00, "Food", LocalDateTime.of(year, month, 7, 10, 0)),
-                    new Expense("Car Maintenance", 5000.00, "Transport", LocalDateTime.of(year, month, 20, 11, 45)),
-                    new Expense("Weekend Trip", 6700.00, "Entertainment", LocalDateTime.of(year, month, 24, 12, 0))
+            // 1.A) 2023—every month: rent, utilities, groceries, transport
+            for (int month = 1; month <= 12; month++) {
+                // Rent: 1200/month on the 1st of each month at 10:00
+                expenses.add(new Expense(
+                        "Monthly Rent",
+                        1200.00,
+                        "Housing",
+                        LocalDateTime.of(2023, month, 1, 10, 0)
+                ));
+
+                // Utilities: varying between 150–250 on the 5th
+                double utilAmt = 150 + rnd.nextInt(101); // 150–250
+                expenses.add(new Expense(
+                        "Utilities (electric/gas)",
+                        utilAmt,
+                        "Utilities",
+                        LocalDateTime.of(2023, month, 5, 18, 30)
+                ));
+
+                // Groceries: 300–500 randomly on day between 10–15
+                double groceryAmt = 300 + rnd.nextInt(201); // 300–500
+                int grocDay = 10 + rnd.nextInt(6);
+                expenses.add(new Expense(
+                        "Groceries",
+                        groceryAmt,
+                        "Food",
+                        LocalDateTime.of(2023, month, grocDay, 12, 0)
+                ));
+
+                // Transport (gas/public transit): 100–200 on the 20th
+                double transAmt = 100 + rnd.nextInt(101);
+                expenses.add(new Expense(
+                        "Transport",
+                        transAmt,
+                        "Transport",
+                        LocalDateTime.of(2023, month, 20, 9, 0)
+                ));
+
+                // One “entertainment” or “dining out” purchase per quarter
+                if (month % 3 == 0) {
+                    double dineAmt = 50 + rnd.nextInt(151); // 50–200
+                    expenses.add(new Expense(
+                            "Dining Out",
+                            dineAmt,
+                            "Entertainment",
+                            LocalDateTime.of(2023, month, 18, 19, 0)
+                    ));
+                }
+            }
+
+            // 1.B) 2024—scale up a little: rent rises to 1250, utilities 175–300, groceries 350–550
+            for (int month = 1; month <= 12; month++) {
+                // Rent: $1,250 on 1st
+                expenses.add(new Expense(
+                        "Monthly Rent",
+                        1250.00,
+                        "Housing",
+                        LocalDateTime.of(2024, month, 1, 10, 0)
+                ));
+
+                // Utilities: 175–300 on the 5th
+                double utilAmt = 175 + rnd.nextInt(126); // 175–300
+                expenses.add(new Expense(
+                        "Utilities (electric/gas)",
+                        utilAmt,
+                        "Utilities",
+                        LocalDateTime.of(2024, month, 5, 18, 30)
+                ));
+
+                // Groceries: 350–550 on day 12–17
+                double groceryAmt = 350 + rnd.nextInt(201); // 350–550
+                int grocDay = 12 + rnd.nextInt(6);
+                expenses.add(new Expense(
+                        "Groceries",
+                        groceryAmt,
+                        "Food",
+                        LocalDateTime.of(2024, month, grocDay, 12, 0)
+                ));
+
+                // Transport: 120–220 on day 22
+                double transAmt = 120 + rnd.nextInt(101);
+                expenses.add(new Expense(
+                        "Transport",
+                        transAmt,
+                        "Transport",
+                        LocalDateTime.of(2024, month, 22, 9, 0)
+                ));
+
+                // Subscription: $15–20 for streaming on the 10th
+                double subAmt = 15 + rnd.nextInt(6); // 15–20
+                expenses.add(new Expense(
+                        "Streaming Subscription",
+                        subAmt,
+                        "Subscription",
+                        LocalDateTime.of(2024, month, 10, 12, 0)
+                ));
+
+                // One large “one-off” purchase mid‐year: new furniture or electronics
+                if (month == 7) {
+                    double furnAmt = 9500.00;
+                    expenses.add(new Expense(
+                            "Furniture Purchase",
+                            furnAmt,
+                            "Home",
+                            LocalDateTime.of(2024, 7, 6, 15, 30)
+                    ));
+                }
+                if (month == 9) {
+                    double tripAmt = 6700.00;
+                    expenses.add(new Expense(
+                            "Weekend Trip",
+                            tripAmt,
+                            "Entertainment",
+                            LocalDateTime.of(2024, 9, 15, 12, 0)
+                    ));
+                }
+            }
+
+            List<Expense> expenses2025 = List.of(
+
+                    new Expense("Monthly Rent", 1300.00, "Housing", LocalDateTime.of(2025, 1, 1, 10, 0)),
+                    new Expense("Utilities (electric/gas)", 220.00, "Utilities", LocalDateTime.of(2025, 1, 5, 18, 30)),
+                    new Expense("Groceries", 450.00, "Food", LocalDateTime.of(2025, 1, 12, 12, 0)),
+                    new Expense("Transport", 150.00, "Transport", LocalDateTime.of(2025, 1, 20, 9, 0)),
+
+                    new Expense("Monthly Rent", 1300.00, "Housing", LocalDateTime.of(2025, 2, 1, 10, 0)),
+                    new Expense("Utilities (electric/gas)", 230.00, "Utilities", LocalDateTime.of(2025, 2, 5, 18, 30)),
+                    new Expense("Groceries", 480.00, "Food", LocalDateTime.of(2025, 2, 13, 12, 0)),
+                    new Expense("Transport", 160.00, "Transport", LocalDateTime.of(2025, 2, 20, 9, 0)),
+
+                    new Expense("Monthly Rent", 1300.00, "Housing", LocalDateTime.of(2025, 3, 1, 10, 0)),
+                    new Expense("Utilities (electric/gas)", 240.00, "Utilities", LocalDateTime.of(2025, 3, 5, 18, 30)),
+                    new Expense("Groceries", 500.00, "Food", LocalDateTime.of(2025, 3, 14, 12, 0)),
+                    new Expense("Transport", 170.00, "Transport", LocalDateTime.of(2025, 3, 20, 9, 0)),
+
+                    new Expense("Monthly Rent", 1300.00, "Housing", LocalDateTime.of(2025, 4, 1, 10, 0)),
+                    new Expense("Utilities (electric/gas)", 260.00, "Utilities", LocalDateTime.of(2025, 4, 5, 18, 30)),
+                    new Expense("Groceries", 520.00, "Food", LocalDateTime.of(2025, 4, 12, 12, 0)),
+                    new Expense("Transport", 180.00, "Transport", LocalDateTime.of(2025, 4, 20, 9, 0)),
+                    // plus an ad‐hoc “Netflix” subscription and “random” weekend spend in April:
+                    new Expense("Netflix Subscription", 15.00, "Subscription", LocalDateTime.of(2025, 4, 8, 12, 0)),
+                    new Expense("Dining Out", 120.00, "Entertainment", LocalDateTime.of(2025, 4, 15, 19, 0)),
+
+                    new Expense("Monthly Rent", 1300.00, "Housing", LocalDateTime.of(2025, 5, 1, 10, 0)),
+                    new Expense("Utilities (electric/gas)", 250.00, "Utilities", LocalDateTime.of(2025, 5, 5, 18, 30)),
+                    new Expense("Groceries", 550.00, "Food", LocalDateTime.of(2025, 5, 11, 12, 0)),
+                    new Expense("Transport", 190.00, "Transport", LocalDateTime.of(2025, 5, 20, 9, 0)),
+
+                    new Expense("Monthly Rent", 1300.00, "Housing", LocalDateTime.of(2025, 6, 1, 10, 0)),
+                    new Expense("Utilities (electric/gas)", 260.00, "Utilities", LocalDateTime.of(2025, 6, 5, 18, 30)),
+                    new Expense("Groceries", 580.00, "Food", LocalDateTime.of(2025, 6, 12, 12, 0)),
+                    new Expense("Transport", 200.00, "Transport", LocalDateTime.of(2025, 6, 20, 9, 0))
             );
 
-            repos.saveAll(expenses);
+            expenses.addAll(expenses2025);
+
+            int batchSize = 10;
+            for(int i =0 ; i < expenses.size(); i += batchSize){
+                int end = Math.min(i + batchSize, expenses.size());
+                List<Expense> batch = expenses.subList(i, end);
+                repos.saveAll(batch);
+                System.out.println("Inserted Expense batch: indexes " + i + "–" + (end - 1));
+            }
             repos.flush();
+
+            List<SavingGoal> financialGoals = new ArrayList<>();
+
+            financialGoals.add(new SavingGoal(
+                    "Emergency Target fund",
+                    new BigDecimal("10000.00"),
+                    BigDecimal.ZERO
+            ));
+
+            financialGoals.add(new SavingGoal(
+                    "Long-Term Investment Goal",
+                    new BigDecimal("50000.00"),
+                    BigDecimal.ZERO
+            ));
+
+            financialGoals.add(new SavingGoal(
+                    "Debt-Free Living",
+                    new BigDecimal("0.00"),
+                    BigDecimal.ZERO
+            ));
+
+            savingRepository.saveAll(financialGoals);
+
         };
     }
 }

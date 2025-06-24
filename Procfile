@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/expense-tracker-0.0.1-SNAPSHOT.jar
+web: java -Xmx300m -Xms300m -XX:MaxRAMPercentage=75 -jar target/expense-tracker-0.0.1-SNAPSHOT.jar

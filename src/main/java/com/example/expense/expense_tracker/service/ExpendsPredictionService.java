@@ -4,10 +4,12 @@ import com.example.expense.expense_tracker.repos.ExpenseRepository;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ExpendsPredictionService {
@@ -17,8 +19,9 @@ public class ExpendsPredictionService {
         this.expenseRepository = expenseRepository;
     }
 
+    @Transactional(readOnly = true)
     public double predictNextMonthExpense(){
-        List<Object[]> expenseData = expenseRepository.getExpenseByMonth();
+        List<Object[]> expenseData = expenseRepository.getExpenseByMonth().collect(Collectors.toList());;
         expenseData.sort(Comparator.comparingInt(row -> ((Number) row[1]).intValue()));
         if(expenseData.size() < 4){
             return 0;
@@ -46,13 +49,10 @@ public class ExpendsPredictionService {
             regression.addData(months.get(i), expenses.get(i));
         }
         double nextMonth = months.get(months.size() - 1) + 1;
-        double predictedExpense = regression.predict(nextMonth);
+        double nextTimeIndex = nextMonth + 1;
+        double predictedExpense = regression.predict(nextTimeIndex);
 
-        if(predictedExpense < 0){
-            return 0;
-        }else{
-            return predictedExpense;
-        }
+        return Math.max(predictedExpense, 0);
     }
 
 }
